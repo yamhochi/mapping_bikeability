@@ -1,3 +1,5 @@
+/*pgrouting kdijkstra algorithm for 1 to multiple OD pairs*/
+/* from Melbourne CBD to 20km radius */
 create table raw_base as
 SELECT seq, id1 AS path, id2 AS node, id3 AS edge, cost, b.geom, b.source, st_length(b.geom)
 		FROM pgr_kdijkstraPath(
